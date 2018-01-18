@@ -27,6 +27,8 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
 
+  
+  it { should_not allow_mass_assignment_of :admin }
   it { should be_valid }
   it { should_not be_admin }
   it { should respond_to(:authenticate) }
